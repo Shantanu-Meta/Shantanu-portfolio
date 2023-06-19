@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="me.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&family=Assistant:wght@500&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alice&family=Assistant:wght@500&family=Kalam:wght@300&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>Shantanu-Dutta</title>
+
+    <style>
+        
+        html{
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(13, 0, 38);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        } 
+
+        main hr{
+            border: 0;
+            background: #a4b3d3;
+            height: 1px;
+            margin: 4rem 3rem 0;
+            box-shadow: 0px 12px 25px 0px;
+        } 
+      
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgb(37 18 76);
+            padding: 12px 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+        }
+        .sign a{
+            font-family: 'Kalam', cursive;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li{
+            list-style: none;
+            margin: 0 20px;
+        } 
+        nav ul li a:hover{
+            list-style: none;
+            font-size: 1rem;
+            color: rgb(186, 172, 214);
+        } 
+
+        a{
+            text-decoration: none;
+            color: white;
+        }  
+        /* // section 1 */
+
+        .home{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        } 
+        .home>div,.about>div{
+            width:35%;
+        } 
+        .left-info{
+            font-size: 2.5rem;
+            margin-top: 100px;
+        } 
+        .purple{
+            color: rgb(125, 75, 226);
+        }
+        #about-down{
+            font-size: 13px;
+            display: block;
+            width: 96px;
+            box-sizing: border-box;
+        }
+
+        .about{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+            font-size: 1.2rem;
+        } 
+        .about-me{
+            border: 2px solid rgb(141, 99, 227);
+            padding: 5px;
+            border-radius: 20px;
+            background: rgb(125, 75, 226);
+            box-shadow: 0px 4px 16px rgb(182 128 255);
+        }
+        
+        .grey{
+            color: grey;
+            font-size: 1rem;
+        } 
+        .sub-size{
+            font-size: 18px;
+        }
+        .about>div>ul, #left-info p{
+            margin: 25px 0 ;
+        } 
+        #left-info p{
+            text-align:start;
+        }
+        .noStyleList li{
+            list-style: none;
+        } 
+        .ul-lists{
+            font-size: 1.15rem;
+        }
+        .education{
+            /* font-size: 10px; */
+            width:40%;
+        } 
+       
+        .box{
+            width: 80vw;
+            height: 2px;
+            background: #ffffff;
+            margin: 30px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+       .verticle-line{
+        height: 3vw;
+        width: 2px;
+        background: #ffffff;
+       }
+       .img-logo{
+        width: 77px;
+        position: relative;
+        top: 32px;
+        left: -37px;
+       } 
+       .verticle-line img+span{
+        position: relative;
+        top: 25px;
+        left: -18px;
+        display: flex;
+        width: 50px;
+     
+       }
+       .link{ 
+        position: relative;
+        top: 40px;
+        left: -23px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background: rgb(101 69 195);
+        box-shadow: 0px 0px 3px 0px rgb(182 128 255);
+       }
+       .link img{
+        position: relative;
+        top: 8px;
+        width: 20px;
+       }
+       #full-socio{
+        margin-top: 3rem;
+       }
+
+       .social-handle{
+        width: 100%;
+        /* height: 100%; */
+        margin-top: 25px;
+
+       }  
+       .social-handle ul{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+       }
+       .social-handle ul li{
+        list-style: none;
+        margin: 0 10px 0 0;
+       }
+
+       .social-handle ul li img{
+        width: 3rem;
+       } 
+       
+       .tech{
+            max-width: 83vw;
+            margin: auto; 
+            height: 45vh;
+        }
+        .project{
+            max-width: 83vw;
+            margin: 50px auto; 
+        }
+
+       .flex-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+       }
+        
+       .single-warap{
+        box-sizing: border-box;
+        width: 22rem;
+        height: 22rem;
+        margin: 12px;
+        position: relative;
+        background: rgb(17 4 42);
+        box-shadow: rgb(101 69 195 / 50%) 0px 4px 12px;
+        border-radius: 15px;
+       } 
+       .single-warap:hover{
+        cursor: pointer;
+        background: rgb(17, 0, 48);
+       }
+
+       .single-warap img{
+        width: 100%;
+        height: 50%;
+        background-attachment: fixed;
+        border-radius: 15px;
+       }
+       .single-warap div{
+        font-size: 14px;
+       }
+       .single-warap div h3{
+        text-align: center;
+       }
+       .head-desc{
+        margin-top: 5px;
+       }
+       .head-desc p{
+        text-align: center;
+       }
+       .go-link{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        position:absolute;
+        bottom: 0;
+        margin: 0 0 10px 35%;
+        cursor: pointer;
+        
+       }
+       .go-link button{
+        color: white;
+        cursor: pointer;
+        width: 100px;
+        height: 33px;
+        font-size: 1.2rem;
+        background: rgb(125, 75, 226);
+        border: none;
+        border-radius: 50px;
+        box-shadow: 0px 0px 16px rgb(125 75 226);
+       }
+
+       footer{
+        background-color: rgb(37 18 76);
+        text-align: center;
+        padding: 10px 0 0 0;
+       }
+       .footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 10px 0;
+       }
+       .footer div{
+        text-align: start;
+       }
+       .footer-secind ul{
+        list-style-type: none;
+       }
+       .footer-first img{
+        border-radius: 20%;
+        width: 3.8rem;
+       }
+       #footer-right{
+        color: grey;
+        display: block;
+        margin: 25px 0 0 0;
+       }
+       
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="nav-bar">
+            <div class="sign">
+                <a href="#home"><h1>Shantanu Dutta</h1></a>
+            </div>
+
+            <div class="total-list">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <!-- <li><a href="#achievements">Acheivements</a></li> -->
+                    <li><a href="#connect">Connect me</a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Main part --> 
+    <main> 
+        <!-- section 1>> HOME -->
+        <section class="home" id="home">
+            <div class="left-info">
+                <h3>This is <span class="purple">Shanatanu</span></h3> 
+                <div>I am a student &</div>
+                <span id="element" class="purple"></span>
+
+                <div id="full-socio">
+                    <span id="about-down" class="about-me" >Connect me</span>
+                    <div class="social-handle">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"><img src="liLogo.png" alt="" class="social-img"></a> </li>
+                            <li><a href="tomail: shantanubhs1985@gmail.com"><img src="email.png" alt="" class="social-img"></a> </li>
+                            <li><a href="https://github.com/Shantanu-Meta"><img src="githubLogo.png" alt="" class="social-img"></a> </li>
+                            <li><a href=""><img src="instagram.png" alt="" class="social-img"></a> </li>
+                            <li><a href=""><img src="fb.png" alt="" class="social-img"></a> </li>
+                            <li><a href=""><img src="telegram.png" alt="" class="social-img"></a> </li>
+                            <li><a href=""><img src="discord.png" alt="" class="social-img"></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+    
+            <div class="right-img">
+                <img src="png.webp" width="400px">
+            </div>
+        </section> 
+        <hr>
+
+        <!-- section 1>> about(education) -->
+        <section class="about" id="about"> 
+            <div id="left-info">
+               <span id="aboutme" class="about-me">About me</span>
+
+                <p>Hello folks! welcome to my porfolio. I am Shantanu Dutta, a student of Bachelor of computer application at IEM, kolkata. I have enough curiosity about technologies and their impact in todays life. Sometimes I prefer of developing websites, but my actual focus is on data structure and algorithm. Various type of algorithms in the world make me amazed. I wan to put valuable impact in this current world.My hobbies are watching web seris & travelling. Now have a look into my portfolio.
+                </p> 
+            </div>
+
+            <div class="education">
+                <h1>Education</h1>
+                <span class="grey">See my qualifications</span> 
+                <ul class="ul-lists">
+                    <li style="margin-bottom:25px;">
+                        Bachelor of Computer Application(BCA) 
+                        <div class="left-margin">
+                            <ul class="noStyleList">
+                                <li class="grey sub-size">Institute of Engineering and Management('22-present)</li>
+                                <li class="grey sub-size">Sgpa:10.0(1st sem)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        Higher sceondary(PCMB)
+                        <div class="left-margin">
+                            <ul class="noStyleList">
+                                <li class="grey sub-size">Bolpur High School('20-'22)</li>
+                                <li class="grey sub-size">Marks: 97%</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section> 
+
+        <section class="tech heading-h1-span">
+            
+                <h1>Tech-Skills</h1>
+                <span class="grey">check my tech knowledge</span> 
+                <div class="box">
+                    <div class="verticle-line">
+                        <img src="cpp.png" alt="" class="img-logo">
+                        <span>C++</span>
+                        <span class="link"><a href="https://leetcode.com/shantanu49/"><img src="./leetcode.png" alt=""></a></span>
+                    </div>
+                    <div class="verticle-line">
+                        <img src="c.png" alt="" class="img-logo">
+                        <span>C Lan.</span>
+                        <span class="link"><a href="https://auth.geeksforgeeks.org/user/shantanuofdkxd/practice"><img src="./leetcode.png" alt=""></a></span>
+                    </div>
+                    <div class="verticle-line">
+                        <img src="github.png" alt="" class="img-logo">
+                        <span>GitHub</span>
+                        <span class="link"><a href="#"><img src="./leetcode.png" alt=""></a></span>
+                    </div>
+                    <div class="verticle-line">
+                        <img src="html.png" alt="" class="img-logo">
+                        <span>HTML</span>
+                        <span class="link"><a href="#"><img src="./leetcode.png" alt=""></a></span>
+                    </div>
+                    <div class="verticle-line">
+                        <img src="css.png" alt="" class="img-logo">
+                        <span>CSS</span>
+                        <span class="link"><a href="#"><img src="./leetcode.png" alt=""></a></span>
+                    </div>
+                    <div class="verticle-line">
+                        <img src="gcloud.png" alt="" class="img-logo">
+                        <span>Quicklab</span>
+                        <span class="link"><a href="#"><img src="./leetcode.png" alt=""></a></span>
+                    </div>
+                </div>
+        </section>
+        <hr> 
+
+        <section class="project" id="projects">
+           <h1>Top Projects</h1>
+           <span class="grey">check out some my creativity</span> 
+
+        <div class="flex-box"> 
+            <a href="https://github.com/Shantanu-Meta/FlameNWok">
+                <div class="single-warap">
+                    <img src="Flamenwok.png" alt="">
+                    <div class="head-desc">
+                        <h3>Flame N Wok</h3>
+                        <p>Flame N wok, a branded resturant based in Kolkata. Developed their official websited and updated the needed portion.</p>
+                    </div>
+                    <div class="go-link">
+                        <button>GitHub <i class="fa fa-github"></i></button>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/Shantanu-Meta/typing-test">
+                <div class="single-warap">
+                    <img src="typingtest.png" alt="">
+                    <div class="head-desc">
+                        <h3>Typing-test</h3>
+                        <p>Typing-Test is a web application to test your typing speed and helps you to ace in your typing speed. It also contains user log in portal and keeps track user's gain.</p>
+                    </div>
+                    <div class="go-link">
+                        <button>GitHub <i class="fa fa-github"></i></button>
+                    </div>
+                </div>
+            </a>
+           <a href="https://github.com/Shantanu-Meta/OTT">
+                <div class="single-warap">
+                    <img src="ott.png" alt="">
+                    <div class="head-desc">
+                        <h3>OTT Platform</h3>
+                        <p>OTT-Platform is a online movie hosting and watching web application. User can watch their favourit movies with as soon as it released.(It is in the first stage)</p>
+                    </div>
+                    <div class="go-link">
+                        <button>GitHub <i class="fa fa-github"></i></button>
+                    </div>
+                </div>
+            </a>
+        <a href="https://github.com/Shantanu-Meta/All-Calc">
+            <div class="single-warap">
+                <img src="allcalc.png" alt="">
+                <div class="head-desc">
+                    <h3>All~Calc</h3>
+                    <p>All~Calc is a multi mathematica problem solving web application. Any type of mathematics based calculation can be solved instantly.(It is in first stage) </p>
+                </div>
+                <div class="go-link">
+                    <button>GitHub <i class="fa fa-github"></i></button>
+                </div>
+            </div>
+        </a>
+ 
+  
+        </div>
+        </section> 
+    </main> 
+
+    <footer>
+        <div class="footer" id="connect">
+            <div class="footer-first">
+                <img src="./me.png" alt="">
+                <h3>Shantanu's Portfolio</h3>
+            </div>
+            <div class="footer-secind">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Connect</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+               <h3>Create Connection</h3>
+               <div class="social-handle">
+                    <ul>
+                        <li><a href=""><img src="liLogo.png" alt="" class="social-img"></a> </li>
+                        <li><a href=""><img src="email.png" alt="" class="social-img"></a> </li>
+                        <li><a href=""><img src="githubLogo.png" alt="" class="social-img"></a> </li>
+                        <li><a href=""><img src="instagram.png" alt="" class="social-img"></a> </li>
+                        <li><a href=""><img src="fb.png" alt="" class="social-img"></a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span id="footer-right">Copyright © 2023 Shantanu-Dutta</span>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+        strings: ['DSA solver' , 'frontend developer' , 'warm learner'],
+        typeSpeed: 50,
+        });
+    </script>
+</body>
+</html>
