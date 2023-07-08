@@ -386,7 +386,7 @@ footer {
     width: 100%;
     flex-direction: column;
     background-color: rgb(13, 0, 38);
-    font-size: 0.8rem;
+    font-size: 1rem;
     transform-origin: top center;
     animation: dropDown 0.5s ease forwards;
   }
@@ -404,7 +404,8 @@ footer {
   nav ul li {
     text-align: center;
     width: 80%;
-    margin: 7px auto;
+    margin: 10px auto;
+    padding: 5px;
   }
   nav ul li:hover,
   nav ul li:focus {
@@ -523,6 +524,6 @@ footer {
   nav {
     justify-content: space-around;
     align-items: center;
-    padding: 0.1rem 0;
+    padding: 0.5rem 0;
   }
 }
