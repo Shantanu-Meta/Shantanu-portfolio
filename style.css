@@ -378,11 +378,43 @@ footer {
 }
 
 @media screen and (max-width: 548px) {
-  nav ul,
-  main,
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(13, 0, 38);
+    font-size: 0.8rem;
+    transform-origin: top center;
+    animation: dropDown 0.5s ease forwards;
+  }
+  @keyframes dropDown {
+    0% {
+      transform: scaleY(0);
+    }
+    95% {
+      transform: scaleY(1.2);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  nav ul li {
+    text-align: center;
+    width: 80%;
+    margin: 7px auto;
+  }
+  nav ul li:hover,
+  nav ul li:focus {
+    transform: scale(1.2);
+    transition: all 0.2s;
+  }
+  /* main,
   footer {
     display: none;
-  }
+  } */
   .total-list .menu-button {
     display: flex;
     align-items: center;
@@ -392,6 +424,7 @@ footer {
   body {
     font-size: 0.7em;
   }
+  /* Hamberger button */
   .menu-button {
     width: 35px;
     height: 35px;
@@ -456,13 +489,39 @@ footer {
     transform: translateX(-20px) rotate(-45deg);
   }
 
-  .menu-button:hover nav ul,
-  .menu-button:focus nav ul {
+  .menu-button:hover ~ ul,
+  .total-list ul:hover {
     display: block;
   }
 
   nav {
     justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 0;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 40px 0;
+  }
+
+  .left-info {
+    font-size: 2.5em;
+    margin-top: 25px;
+  }
+  .home > div {
+    width: 80%;
+  }
+
+  .social-handle ul {
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  nav {
+    justify-content: space-around;
     align-items: center;
     padding: 0.1rem 0;
   }
