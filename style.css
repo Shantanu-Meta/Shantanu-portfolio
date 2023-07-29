@@ -97,23 +97,32 @@ a {
   font-size: 2.5em;
   margin-top: 100px;
 }
+.right-img {
+  display: grid;
+  place-content: center;
+}
 .right-img img {
   width: 90%;
   height: auto;
-  animation: float 5s ease-in-out infinite alternate forwards;
+  margin: auto;
+  /* filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.631)); */
+  transition: all 2s ease-in-out 0s;
+  animation: zoom-In-Out 3.5s ease-in-out infinite alternate forwards;
+  filter: drop-shadow(18px 10px 4px #01017a);
 }
-@keyframes float {
+@keyframes zoom-In-Out {
   0% {
-    transform: translateY(0);
+    transform: scale(1);
   }
-  33% {
-    transform: translateY(-20px) rotate(-2deg);
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(4px 4px 6px black);
   }
-  66% {
-    transform: translateY(20px) rotate(2deg);
-  }
+
   100% {
-    transform: translateY(0) rotate(0deg);
+    transform: scale(1);
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.631));
+    filter: drop-shadow(18px 10px 4px #0b0ba7);
   }
 }
 
@@ -122,9 +131,8 @@ a {
 }
 #about-down {
   font-size: 13px;
-  display: block;
-  width: 96px;
-  box-sizing: border-box;
+  margin-right: 2rem;
+  cursor: pointer;
 }
 
 .about {
@@ -139,7 +147,36 @@ a {
   padding: 5px;
   border-radius: 20px;
   background: rgb(125, 75, 226);
-  box-shadow: 0px 4px 16px rgb(182 128 255);
+  box-shadow: rgb(182 128 255) 0px 2px 4px;
+}
+
+#hire-btn {
+  background-image: linear-gradient(90deg, rgb(125 75 226), rgb(37 18 76));
+  font-size: 1rem;
+  padding: 5px 10px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+
+#hire-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  transform: scaleX(0);
+  transition: all 0.2s linear 0s;
+  background-color: rgb(37 18 76);
+  transform-origin: left;
+  cursor: pointer;
+}
+
+#hire-btn:hover::before,
+#hire-btn:active::before {
+  transform: scaleX(1);
 }
 
 .grey {
@@ -231,7 +268,6 @@ a {
 
 .social-handle {
   width: 100%;
-  /* height: 100%; */
   margin-top: 25px;
 }
 .social-handle ul {
@@ -748,7 +784,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 360px) {
   .no-wrap {
     white-space: normal;
   }
