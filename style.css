@@ -16,9 +16,27 @@ html {
 body {
   width: 100%;
   background: rgb(13, 0, 38);
+  background-color: #0d0026;
+  background-image: url("https://w0.peakpx.com/wallpaper/305/517/HD-wallpaper-spot-black-purple-minimal.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
   color: white;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  position: relative;
+}
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(42 37 37 / 32%);
+  z-index: -1;
 }
 img {
   display: block;
@@ -482,6 +500,50 @@ footer {
 }
 .total-list .menu-button {
   display: none;
+}
+
+/* Contact Me section */
+
+.contact-section {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.contact-section-container {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+.contact-me {
+  font-size: clamp(16px, 4.2vw, 32px);
+}
+.contact-me-desc {
+  font-size: clamp(16px, 3.2vw, 25px);
+}
+.contact-me-form {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.formfield {
+  width: 85%;
+  height: 2rem;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 5px -2px black;
+  border: none;
+}
+#text-area {
+  height: 5rem;
+  resize: none;
 }
 
 /* || Media queries for 1200px  */
