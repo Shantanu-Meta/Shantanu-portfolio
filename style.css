@@ -58,7 +58,8 @@ main hr {
 }
 
 header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 10;
 }
@@ -67,9 +68,15 @@ nav {
   justify-content: space-around;
   align-items: center;
   gap: clamp(15px, 25vw, 600px);
-  background: rgb(37 18 76);
   padding: 12px 0;
   overflow: hidden;
+  background-color: #300f3087;
+  border-radius: 0 0 10px 10px;
+  box-shadow: rgb(0 0 0 / 17%) 0px -23px 25px 0px inset,
+    rgb(0 0 0 / 15%) 0px -36px 30px 0px inset,
+    rgb(0 0 0 / 10%) 0px -79px 40px 0px inset, rgb(0 0 0 / 6%) 0px 2px 1px,
+    rgb(0 0 0 / 9%) 0px 4px 2px, rgb(0 0 0 / 9%) 0px 8px 4px,
+    rgb(0 0 0 / 9%) 0px 16px 8px;
 }
 .sign {
   font-family: "Alice", serif;
@@ -535,15 +542,28 @@ footer {
 }
 .formfield {
   width: 85%;
-  height: 2rem;
   padding: 10px;
   border-radius: 3px;
   box-shadow: 0px 4px 5px -2px black;
   border: none;
+  background-color: #b59db44a;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 1rem;
+  border-radius: 15px;
+  color: white;
 }
 #text-area {
   height: 5rem;
   resize: none;
+}
+.button {
+  width: max-content;
+  margin: 0 auto;
+  padding: 0.5rem 0.7rem;
+  background-color: #482a47;
+  border-radius: 5px;
+  box-shadow: rgb(4 5 6) 0px 20px 30px -10px;
+  cursor: pointer;
 }
 
 /* || Media queries for 1200px  */
@@ -606,7 +626,7 @@ footer {
     left: 0;
     width: 100%;
     flex-direction: column;
-    background-color: rgb(13, 0, 38);
+    background-color: #230c24e0;
     font-size: 1rem;
     transform-origin: top center;
     animation: dropDown 0.5s ease forwards;
@@ -726,7 +746,7 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin: 40px 0;
+    margin: 55px 0;
   }
 
   .left-info {
@@ -918,6 +938,10 @@ footer {
   }
   .btn {
     display: none;
+  }
+
+  .contact-section-container {
+    width: 90%;
   }
 }
 
