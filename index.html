@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="me.png" type="image/x-icon" />
+    <link rel="icon" href="./assets/me.png" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./assets/https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -29,9 +30,9 @@
     <title>Shantanu-Dutta</title>
   </head>
 
-  <body>
+  <body class="gradient-bg-services">
     <!-- Navigation bar -->
-    <header>
+    <header class="show">
       <nav class="nav-bar">
         <div class="sign">
           <a href="#home"
@@ -40,15 +41,16 @@
         </div>
 
         <div class="total-list">
-          <button class="menu-button">
-            <div class="menu-icon"></div>
+          <button class="menu-button" onclick="displayNav()">
+            <div class="menu-icon bar1"></div>
+            <div class="menu-icon bar2"></div>
+            <div class="menu-icon bar3"></div>
           </button>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <!-- <li><a href="#achievements">Acheivements</a></li> -->
-            <li><a href="#connect">Connect me</a></li>
+          <ul nav-ul>
+            <li><a href="#home">Home</a> <div class="underline"></div></li>
+            <li><a href="#about">About</a> <div class="underline"></div></li>
+            <li><a href="#projects">Projects</a> <div class="underline"></div></li>
+            <li><a href="#connect">Connect me</a> <div class="underline"></div></li>
           </ul>
         </div>
       </nav>
@@ -58,40 +60,36 @@
     <main>
       <!-- section 1>> HOME -->
       <section class="home display-bottom" id="home">
+        <span class="lights light-1"></span>
+        <span class="lights light-2"></span>
         <div class="left-info">
           <span class="no-wrap"
             ><h3>
               This is <span class="linear-gradient-name">Shanatanu</span>
             </h3></span
           >
-          <div>I am a student &</div>
+          <div>A student &</div>
           <span id="element" class="purple"></span>
 
           <div id="full-socio">
-            <span id="about-down" class="about-me">Connect me</span>
-            <span id="hire-btn">Hire Me</span>
-
+            <span id="about-down" class="about-me">Let's Connect</span>
+            
             <div class="social-handle">
               <ul>
                 <li>
                   <a
                     href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"
-                    ><img src="liLogo.png" alt="" class="social-img"
+                    ><img src="./assets/liLogo.png" alt="" class="social-img"
                   /></a>
                 </li>
                 <li>
                   <a href="tomail: shantanubhs1985@gmail.com"
-                    ><img src="email.png" alt="" class="social-img"
+                    ><img src="./assets/email.png" alt="" class="social-img"
                   /></a>
                 </li>
                 <li>
                   <a href="https://github.com/Shantanu-Meta"
-                    ><img src="githubLogo.png" alt="" class="social-img"
-                  /></a>
-                </li>
-                <li>
-                  <a href=""
-                    ><img src="instagram.png" alt="" class="social-img"
+                    ><img src="./assets/githubLogo.png" alt="" class="social-img"
                   /></a>
                 </li>
               </ul>
@@ -100,9 +98,27 @@
         </div>
 
         <div class="right-img">
-          <span class="faded-text" id="fade-name">ABOUT</span>
-          <img src="png.webp" width="400" height="400" />
+          <img src="./assets/home2.png" width="400" height="400" id="img1"/>
+          <img src="./assets/home3.png" width="400" height="400" id="img2"/>
         </div>
+
+        <div class="circle-abs">
+          <div class="circle" width="400" height="400">
+            <div class="img1 circleImg">
+              <img src="./assets/books.png" alt="" width="150" height="150">
+            </div>
+            <div class="img2 circleImg">
+              <img src="./assets/coffe.png" alt=""  width="150" height="150">
+            </div>
+            <div class="img3 circleImg">
+              <img src="./assets/laptop.png" alt=""  width="150" height="150">
+            </div>
+          </div>
+        </div>
+
+
+        <span class="faded-text" id="fade-name">ABOUT</span>
+        
       </section>
       <hr />
 
@@ -112,14 +128,7 @@
           <span id="aboutme" class="about-me">About me</span>
 
           <p>
-            Hello folks! welcome to my porfolio. I am Shantanu Dutta, a student
-            of Bachelor of computer application at IEM, kolkata. I have enough
-            curiosity about technologies and their impact in todays life.
-            Sometimes I prefer of developing websites, but my actual focus is on
-            data structure and algorithm. Various type of algorithms in the
-            world make me amazed. I wan to put valuable impact in this current
-            world.My hobbies are watching web seris & travelling. Now have a
-            look into my portfolio.
+            Hello, I'm Shantanu Dutta, a second-year Computer Science student with a passion for coding, technology, and computer architecture. I love solving LeetCode and Geeks for Geeks problems. Beyond coding, I enjoy traveling and watching web series. Thanks for visiting my portfolio!
           </p>
         </div>
 
@@ -134,7 +143,7 @@
                   <li class="grey sub-size">
                     Institute of Engineering and Management('22-present)
                   </li>
-                  <li class="grey sub-size">Sgpa:10.0(1st sem)</li>
+                  <li class="grey sub-size">Sgpa:10.0(1st Yr)</li>
                 </ul>
               </div>
             </li>
@@ -152,183 +161,353 @@
       </section>
 
       <hr id="display-548px" />
-
+      <!-- tech section -->
       <section class="tech heading-h1-span display-bottom">
         <h1>Tech-Skills</h1>
         <span class="grey">check my tech knowledge</span>
         <span class="faded-text" id="fade-tech">Technology</span>
-        <div class="box">
-          <div class="verticle-line">
-            <img src="cpp.png" alt="" class="img-logo" width="80" height="80" />
-            <span>C++</span>
-            <button class="btn">View <i class="fa fa-eye"></i></button>
-            <span class="link">
-              &#x2022; DSA || &#x2022; Leetcode || &#x2022; GFG
-            </span>
-          </div>
-          <div class="verticle-line">
-            <img src="c.png" alt="" class="img-logo" width="80" height="80" />
-            <span>C Lan.</span>
-            <button class="btn">View <i class="fa fa-eye"></i></button>
-            <span class="link">
-              &#x2022; Satrted my journey with this.
-            </span>
-          </div>
-          <div class="verticle-line">
-            <img
-              src="github.png"
-              alt=""
-              class="img-logo"
-              width="80"
-              height="80"
-            />
-            <span>GitHub</span>
-            <button class="btn">View <i class="fa fa-eye"></i></button>
-            <span class="link">
-              &#x2022;Open Source Contributor.
-            </span>
-          </div>
-          <div class="verticle-line">
-            <img
-              src="html.png"
-              alt=""
-              class="img-logo"
-              width="80"
-              height="80"
-            />
-            <span>HTML</span>
-            <button class="btn">View <i class="fa fa-eye"></i></button>
-            <span class="link">
-              &#x2022; HTML5 || &#x2022;Intermidiate
-            </span>
-          </div>
-          <div class="verticle-line">
-            <img src="css.png" alt="" class="img-logo" width="80" height="80" />
-            <span>CSS</span>
-            <button class="btn">View <i class="fa fa-eye"></i></button>
-            <span class="link">
-              &#x2022; Intermidiate learner.
-            </span>
-          </div>
-          <div class="verticle-line">
-            <img
-              src="gcloud.png"
-              alt=""
-              class="img-logo"
-              width="80"
-              height="80"
-            />
-            <span>Quicklab</span>
-            <button class="btn">View <i class="fa fa-eye"></i></button>
-            <span class="link">
-              &#x2022; G-Cloud contributor || &#x2022; Arcade Program.
-            </span>
+       
+        <div class="out-container">
+          <div class="line"></div>
+  
+          <div class="sub-box">
+  
+            <div class="small-box">
+              <div class="vecrticle"></div>
+              <img src="./assets/cpp.png" alt="" class="img-logo" width="80" height="80" />
+              <span>C++</span>
+              <div class="hover-show-parent">
+                <button class="btn"><i class="fa fa-eye"></i></button>
+                <div class="skill-note">
+                  <ul>
+                    <li>Started to lerarn at 2022</li>
+                    <li>Using for Data Structure & Algo</li>
+                    <li>GFG institute Rank -93</li>
+                    <li>LeetCode daily problem solver</li>
+                  </ul>
+  
+                  <div class="social-handle coding-website">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"
+                            ><img src="./assets/leetcode.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/Shantanu-Meta"
+                            ><img src="./assets/githubLogo.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <span class="link">
+                &#x2022; DSA || &#x2022; Leetcode || &#x2022; GFG
+              </span>
+            </div>
+
+
+            <div class="small-box">
+              <div class="vecrticle"></div>
+              <img src="./assets/c.png" alt="" class="img-logo" width="80" height="80" />
+              <span>C Lan</span>
+              <div class="hover-show-parent">
+                <button class="btn"><i class="fa fa-eye"></i></button>
+                <div class="skill-note">
+                  <ul>
+                    <li>Started to lerarn at 2022</li>
+                    <li>Loved the structured pattern</li>
+                    <li>Initial coding language</li>
+                    <li>Learned about files, streams</li>
+                  </ul>
+  
+                  <div class="social-handle coding-website">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"
+                            ><img src="./assets/leetcode.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/Shantanu-Meta"
+                            ><img src="./assets/githubLogo.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <span class="link">
+                &#x2022; DSA || &#x2022; Leetcode || &#x2022; GFG
+              </span>
+            </div>
+
+            <div class="small-box">
+              <div class="vecrticle"></div>
+              <img src="./assets/html.png" alt="" class="img-logo" width="80" height="80" />
+              <span>HTML</span>
+              <div class="hover-show-parent">
+                <button class="btn"><i class="fa fa-eye"></i></button>
+                <div class="skill-note">
+                  <ul>
+                    <li>Started to lerarn at 2022</li>
+                    <li>Proficient</li>
+                    <li>Developed many mini projects</li>
+                    <li>Learned about tables, tokens, nodes</li>
+                  </ul>
+  
+                  <div class="social-handle coding-website">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"
+                            ><img src="./assets/leetcode.png" alt="" class="social-img" width="10"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/Shantanu-Meta"
+                            ><img src="./assets/githubLogo.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <span class="link">
+                &#x2022; DSA || &#x2022; Leetcode || &#x2022; GFG
+              </span>
+            </div>
+            <div class="small-box">
+              <div class="vecrticle"></div>
+              <img src="./assets/css.png" alt="" class="img-logo" width="80" height="80" />
+              <span>CSS</span>
+              <div class="hover-show-parent">
+                <button class="btn"><i class="fa fa-eye"></i></button>
+                <div class="skill-note">
+                  <ul>
+                    <li>Started to lerarn at 2022</li>
+                    <li>Seemed as interesting</li>
+                    <li>Loved the animation part</li>
+                    <li>Learned about positions, media queries</li>
+                  </ul>
+  
+                  <div class="social-handle coding-website">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"
+                            ><img src="./assets/leetcode.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/Shantanu-Meta"
+                            ><img src="./assets/githubLogo.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <span class="link">
+                &#x2022; DSA || &#x2022; Leetcode || &#x2022; GFG
+              </span>
+            </div>
+            <div class="small-box">
+              <div class="vecrticle"></div>
+              <img src="./assets/gcloud.png" alt="" class="img-logo" width="80" height="80" />
+              <span>Cloud(Basic)</span>
+              <div class="hover-show-parent">
+                <button class="btn"><i class="fa fa-eye"></i></button>
+                <div class="skill-note">
+                  <ul>
+                    <li>Learned via Arcade Games</li>
+                    <li>Learned concept of hosting of websites</li>
+                    <li>VM instance creation/li>
+                    <li>Learned something of Kubernatis cluster</li>
+                  </ul>
+  
+                  <div class="social-handle coding-website">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"
+                            ><img src="./assets/leetcode.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/Shantanu-Meta"
+                            ><img src="./assets/githubLogo.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <span class="link">
+                &#x2022; DSA || &#x2022; Leetcode || &#x2022; GFG
+              </span>
+            </div>
+            <div class="small-box">
+              <div class="vecrticle"></div>
+              <img src="./assets/github.png" alt="" class="img-logo" width="80" height="80" />
+              <span>Git/GitHub</span>
+              <div class="hover-show-parent">
+                <button class="btn"><i class="fa fa-eye"></i></button>
+                <div class="skill-note">
+                  <ul>
+                    <li>true friend in this journey</li>
+                    <li>Loved the hosting tech</li>
+                    <li>Open source contributor</li>
+                    <li>HacktoberFest2023, Diversion, GSSCoc</li>
+                  </ul>
+  
+                  <div class="social-handle coding-website">
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.linkedin.com/in/shantanu-dutta-4a1754245/"
+                            ><img src="./assets/leetcode.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/Shantanu-Meta"
+                            ><img src="./assets/githubLogo.png" alt="" class="social-img"
+                          /></a>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              <span class="link">
+                &#x2022; DSA || &#x2022; Leetcode || &#x2022; GFG
+              </span>
+            </div>
           </div>
         </div>
       </section>
       <hr />
 
+      <!-- Project section -->
       <section class="project display-bottom" id="projects">
         <h1>Top Projects</h1>
-        <span class="grey">check out some my creativity</span>
+        <span class="grey">check out some of my creativity</span>
 
         <div class="flex-box">
-          <a href="https://github.com/Shantanu-Meta/FlameNWok">
             <div class="single-warap">
               <div class="faded-box">
                 <span>Exploring</span>
-                <img width="350" height="150" src="Flamenwok.png" alt="" />
+                <img width="350" height="150" src="./assets/Flamenwok.png" alt="" />
               </div>
               <div class="head-desc">
                 <h3>Flame N Wok</h3>
-                <p>
+                <p class="grey">
                   Flame N wok, a branded resturant based in Kolkata. Developed
                   their official websited and updated the needed portion.
                 </p>
               </div>
               <div class="go-link">
-                <button>GitHub <i class="fa fa-github"></i></button>
+                <button><a href="https://github.com/Shantanu-Meta/FlameNWok">GitHub <i class="fa fa-github"></i></a></button>
               </div>
             </div>
-          </a>
-          <a href="https://github.com/Shantanu-Meta/typing-test">
+          
             <div class="single-warap">
               <div class="faded-box">
                 <span>Exploring</span>
-                <img width="350" height="150" src="typingtest.png" alt="" />
+                <img width="350" height="150" src="./assets/tic-tac-toe.png" alt="" />
+              </div>
+              <div class="head-desc">
+                <h3>Tic-Tac-Toe</h3>
+                <p class="grey">
+                  Tic-Tac-Toe, This is a popular game in the internet. From childhood to adult even at the oldage, this game can give a satisfaction pleasure in off time.
+                </p>
+              </div>
+              <div class="go-link">
+                <button><a href="https://shantanu-meta.github.io/Tick-Tack-Toe/">GitHub <i class="fa fa-github"></i></a></button>
+              </div>
+            </div>
+            
+            <div class="single-warap">
+              <div class="faded-box">
+                <span>Exploring</span>
+                <img width="350" height="150" src="./assets/weather.png" alt="" />
+              </div>
+              <div class="head-desc">
+                <h3>Weather-io</h3>
+                <p class="grey">
+                  Weather-io, This is a weather app where user can see their own located weather as well as user can find any city's weather as their wish. 
+                </p>
+              </div>
+              <div class="go-link">
+                <button><a href="https://shantanu-meta.github.io/Weather-io/">GitHub <i class="fa fa-github"></i></a></button>
+              </div>
+            </div>
+
+            <div class="single-warap disp-none" seeMore>
+              <div class="faded-box">
+                <span>Exploring</span>
+                <img width="350" height="150" src="./assets/typingtest.png" alt="" />
               </div>
               <div class="head-desc">
                 <h3>Typing-test</h3>
-                <p>
+                <p class="grey">
                   Typing-Test is a web application to test your typing speed and
                   helps you to ace in your typing speed. It also contains user
                   log in portal and keeps track user's gain.
                 </p>
               </div>
               <div class="go-link">
-                <button>GitHub <i class="fa fa-github"></i></button>
+                <button><a href="https://github.com/Shantanu-Meta/typing-test">GitHub <i class="fa fa-github"></i></a>
+                </button>
               </div>
-            </div>
-          </a>
-          <a href="https://github.com/Shantanu-Meta/OTT">
-            <div class="single-warap">
+            </div>          
+            <div class="single-warap disp-none" seeMore>
               <div class="faded-box">
                 <span>Exploring</span>
-                <img width="350" height="150" src="ott.png" alt="" />
+                <img width="350" height="150" src="./assets/ott.png" alt="" />
               </div>
               <div class="head-desc">
                 <h3>OTT Platform</h3>
-                <p>
+                <p class="grey">
                   OTT-Platform is a online movie hosting and watching web
                   application. User can watch their favourit movies with as soon
                   as it released.(It is in the first stage)
                 </p>
               </div>
               <div class="go-link">
-                <button>GitHub <i class="fa fa-github"></i></button>
+                <button><a href="https://github.com/Shantanu-Meta/OTT">GitHub <i class="fa fa-github"></i></a>
+                </button>
               </div>
             </div>
-          </a>
-          <a href="https://github.com/Shantanu-Meta/All-Calc">
-            <div class="single-warap">
+            <div class="single-warap disp-none" seeMore>
               <div class="faded-box">
                 <span>Exploring</span>
-                <img width="350" height="150" src="allcalc.png" alt="" />
+                <img width="350" height="150" src="./assets/allcalc.png" alt="" />
               </div>
               <div class="head-desc">
                 <h3>All~Calc</h3>
-                <p>
+                <p class="grey">
                   All~Calc is a multi mathematica problem solving web
                   application. Any type of mathematics based calculation can be
                   solved instantly.(It is in first stage)
                 </p>
               </div>
               <div class="go-link">
-                <button>GitHub <i class="fa fa-github"></i></button>
+                <button><a href="https://github.com/Shantanu-Meta/All-Calc">GitHub <i class="fa fa-github"></i></a></button>
               </div>
-            </div>
-          </a>
-          <a href="https://shantanu-meta.github.io/Shantanu-portfolio/">
-            <div class="single-warap">
-              <div class="faded-box">
-                <span>Exploring</span>
-                <img width="350" height="150" src="portfolio.jpg" alt="" />
-              </div>
-              <div class="head-desc">
-                <h3>Portfolio</h3>
-                <p>
-                  This is mmy portfolio, where you can explore more about me.
-                </p>
-              </div>
-              <div class="go-link">
-                <button>GitHub <i class="fa fa-github"></i></button>
-              </div>
-            </div>
-          </a>
+            </div>          
         </div>
+        <button class="see-more" onclick="loadProjects()" see-more-button>See More</button>
       </section>
 
       <hr />
+
+      <!-- Contact Section -->
       <section class="contact-section">
         <div class="contact-section-container">
           <h1 class="contact-me">Contact Me</h1>
@@ -373,18 +552,18 @@
       </section>
     </main>
 
-    <footer>
-      <div class="footer" id="connect">
+    <footer class="gradient-bg-footer">
+      <div class="footer " id="connect">
         <div class="footer-first">
-          <img src="./me.png" alt="" width="35px" height="35px" />
+          <img src="./assets/./me.png" alt="" width="35px" height="35px" />
           <h3>Shantanu's Portfolio</h3>
         </div>
         <div class="footer-second">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Connect</li>
+            <li><a href="#home">Home<div class="underline"></div></a></li>
+            <li><a href="#about">About<div class="underline"></div></a></li>
+            <li><a href="#projects">Projects<div class="underline"></div></a></li>
+            <li><a href="#connect">Connect<div class="underline"></div></a></li>
           </ul>
         </div>
         <div class="footer-third">
@@ -393,30 +572,31 @@
             <ul>
               <li>
                 <a href=""
-                  ><img src="liLogo.png" alt="" class="social-img"
+                  ><img src="./assets/liLogo.png" alt="" class="social-img"
                 /></a>
               </li>
               <li>
-                <a href=""><img src="email.png" alt="" class="social-img" /></a>
+                <a href=""><img src="./assets/email.png" alt="" class="social-img" /></a>
               </li>
               <li>
                 <a href=""
-                  ><img src="githubLogo.png" alt="" class="social-img"
+                  ><img src="./assets/githubLogo.png" alt="" class="social-img"
                 /></a>
               </li>
               <li>
                 <a href=""
-                  ><img src="instagram.png" alt="" class="social-img"
+                  ><img src="./assets/instagram.png" alt="" class="social-img"
                 /></a>
               </li>
               <li>
-                <a href=""><img src="fb.png" alt="" class="social-img" /></a>
+                <a href=""><img src="./assets/fb.png" alt="" class="social-img" /></a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <span id="footer-right">Copyright © 2023 Shantanu-Dutta</span>
+      <span id="footer-right ">Copyright © <span year></span> Shantanu-Dutta</span>
+    
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
@@ -430,5 +610,7 @@
         backdelay: 1000
       });
     </script>
+
+    <script src="./script.js"></script>
   </body>
 </html>
