@@ -908,6 +908,7 @@ footer {
   }
 
   nav ul {
+    padding: 1rem 0;
     display: none;
     position: absolute;
     top: 100%;
@@ -915,8 +916,9 @@ footer {
     width: 100%;
     flex-direction: column;
     gap: 0.5rem;
-    background-color: var(--UNIVERSAL-BC);
+    background-color: #1818187d;
     background-image: var(--FOOTER-BG-IMG);
+    backdrop-filter: blur(16px);
     font-size: 1rem;
     transform-origin: top center;
     animation: dropDown 0.5s ease forwards;
