@@ -59,3 +59,25 @@ function loadProjects(){
     })
 }
 
+
+
+// Animation on load
+
+animate(); 
+function animate(){
+    let tl = gsap.timeline({defaults: {duration:1}, opacity:0}); 
+    tl.from(".sign", { x:"-100vw",ease: "power3.out"},0)
+    if(window.outerWidth >= 650){
+        tl.from(".nav-ul", {y:"-100vh"},0)
+        console.log("first")
+        tl.from(".left-info", {opacity:0},0.5)
+    }else{
+        tl.from(".left-info", {opacity:0, x:"-100vw"},0.5)
+    }
+    tl.from(".social-handle",{y:"-150%", ease:"bounce"},"<0.2")
+    .from(".right-img", {x:"100vw", ease:"bounce"},0.5)
+    .from(".circle-abs", {opacity:0},"<1")
+}
+
+
+
