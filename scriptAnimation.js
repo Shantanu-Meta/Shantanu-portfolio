@@ -13,3 +13,41 @@ function animate(){
     .from(".right-img", {x:"100vw", ease:"bounce"},0.5)
     .from(".circle-abs", {opacity:0},"<1")
 }
+
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry, index)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show'); 
+        }else{
+            entry.target.classList.remove('show'); 
+        }
+    }),
+    {
+        threshold: 0.5, 
+    }
+})
+const sections = document.querySelectorAll('.fade'); 
+sections.forEach(section=>{
+    observer.observe(section)
+})
+
+const logoObserver = new IntersectionObserver((entries)=>{
+    entries.forEach((entry, index)=>{
+        console.log(index)
+        if(entry.isIntersecting){
+            entry.target.classList.add('comeToTop'); 
+        }else{
+            entry.target.classList.remove('comeToTop'); 
+        }
+    }),
+    {
+        threshold: 0.5, 
+    }
+})
+
+const logos = document.querySelectorAll('.small-box'); 
+logos.forEach(logo=>{
+    logoObserver.observe(logo)
+
+})
